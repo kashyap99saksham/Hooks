@@ -1,3 +1,4 @@
+import { StudentProvider } from './ContextApi/StudenContext';
 import StudentList from './ContextApi/StudentList';
 import StudentStatus from './ContextApi/StudentStatus';
 import ClassCounterOne from './Hooks/ClassCounterOne';
@@ -6,14 +7,18 @@ import HooksUnmount from './Hooks/HooksUnmount';
 
 function App() {
   return (
-    <div className="App">
-      <StudentStatus />
-      <StudentList />
-    </div>
+
+    <StudentProvider>
+      <div className="App">
+        <StudentStatus />
+        <StudentList />
+      </div>
+    </StudentProvider>
   );
 }
 
 export default App;
+
 
 
 
