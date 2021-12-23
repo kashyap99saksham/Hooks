@@ -1,27 +1,31 @@
-import React,{useState,useEffect} from "react";
+import React, { useState } from 'react'
+import { useEffect } from 'react/cjs/react.development'
 
-const Hookcounter1 = () =>{
+const ClassCounterOne = () => {
 
-  const [elementsList, setelementsList] = useState([])
+
+  const [elementList,setElementList] = useState([])
   const [inputData, setInputData] = useState('')
   const [counter,setCounter] = useState(0)
 
-  useEffect(() => {
-      setelementsList([...elementsList, <h1>{inputData}</h1>])
-  }, [counter])
-
-
+  useEffect(()=>{
+    setElementList( [ ...elementList ,<h1>{inputData}</h1> ] )
+  },[counter])
 
   return (
-    <>
-        <button onClick={ () => setCounter(counter+1) }> Add </button>
-
-        <input type='text' value={inputData} onChange={ (e)=>setInputData(e.target.value) } />
-
-        {elementsList}
-
-    </>
+    <div>
+      <button onClick={()=>setCounter(counter+1)}>Add Kro</button>
+      <input type='text' value={inputData} onChange={(e)=>setInputData(e.target.value)} />
+      {elementList}
+    </div>
   )
 }
-    
-export default Hookcounter1 
+
+export default ClassCounterOne
+
+
+// [100]
+
+// [100,200]
+
+// [100,200 , 300]

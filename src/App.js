@@ -5,7 +5,6 @@ import HooksUnmount from './Hooks/HooksUnmount';
 function App() {
   return (
     <div className="App">
-      <ClassCounterOne />
     </div>
   );
 }
