@@ -1,4 +1,5 @@
 import React,{ useState } from 'react'
+import Student from './Student';
 
 const StudentList = () => {
 
@@ -49,7 +50,13 @@ const StudentList = () => {
     ]);
 
     return (
-        <div>
+        <div className='d-flex justiy-content-around'>
+
+            {
+                students.map( (student) => <Student name={student.Name} studentClass={student.Class} info={student.Info}/> )
+
+            }
+
             
         </div>
     )
