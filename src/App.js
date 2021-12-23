@@ -1,3 +1,4 @@
+import AddStudent from './ContextApi/AddStudent';
 import { StudentProvider } from './ContextApi/StudenContext';
 import StudentList from './ContextApi/StudentList';
 import StudentStatus from './ContextApi/StudentStatus';
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
         <StudentStatus />
         <StudentList />
+        <AddStudent />
       </div>
     </StudentProvider>
   );
