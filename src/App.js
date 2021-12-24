@@ -1,25 +1,19 @@
-import AddStudent from './ContextApi/AddStudent';
-import { StudentProvider } from './ContextApi/StudenContext';
-import StudentList from './ContextApi/StudentList';
-import StudentStatus from './ContextApi/StudentStatus';
-import ClassCounterOne from './Hooks/ClassCounterOne';
-import HooksCounterOne from './Hooks/HooksCounterOne';
-import HooksUnmount from './Hooks/HooksUnmount';
+import CounterClick from './HOC/CounterClick';
+import CounterHover from './HOC/CounterHover';
 
 function App() {
   return (
 
-    <StudentProvider>
-      <div className="App">
-        <StudentStatus />
-        <StudentList />
-        <AddStudent />
-      </div>
-    </StudentProvider>
+    <div>
+      <CounterClick />
+      <CounterHover />
+    </div>
   );
 }
 
 export default App;
+
+
 
 
 
